@@ -1,3 +1,6 @@
+/* In globals.css or a relevant CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+
 @import "tailwindcss";
 
 @theme {
@@ -5,15 +8,40 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html, body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  /* --foreground: #171717; */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a; */
     --foreground: #ededed;
+  }
+}
+
+.moon-dance-regular {
+  font-family: "Moon Dance", cursive;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+@media  (max-width: 768px) {
+  .moon-dance-regular {
+    font-family: "Moon Dance", cursive;
+    font-size: 30px;
+    font-weight: 600;
   }
 }
 
