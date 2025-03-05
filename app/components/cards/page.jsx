@@ -4,15 +4,15 @@ import React from "react";
 import Image from "next/image";
 import Img from "@/public/assets/CardImg.jpg";
 import PageTitle from "../pageTitle/page";
-import Card from "../glassCard/page";
+import GlassCard from "../glassCard/page";
 
 const Cards = () => {
   const data = [
     {
       id: 1,
-      title: "Version 1",
+      title: "Selvage Poke Waistcoat Godard",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non neque euismod, tincidunt lectus vitae, tincidunt purus. Nulla facilisi.",
+        "Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
     },
     {
       id: 2,
@@ -29,8 +29,7 @@ const Cards = () => {
   ];
 
   return (
-    <section className="relative w-full h-screen">
-      {/* Background Image */}
+    <section className="relative w-full">
       <Image
         src={Img}
         alt="Background"
@@ -49,9 +48,9 @@ const Cards = () => {
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4">
-              
-              <Card key={i}/>
-              
+              {data.map((item, i) => (
+                <GlassCard key={i} />
+              ))}
             </div>
           </div>
         </section>

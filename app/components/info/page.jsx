@@ -23,7 +23,7 @@ const Page = () => {
         <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center opacity-80 rounded-lg shadow-lg relative">
           <PageTitle heading="Versions" />
 
-          <p className="leading-relaxed text-sm sm:text-lg ">
+          <p className="leading-relaxed text-sm sm:text-lg text-white">
             Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
             taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
             taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid

@@ -1,4 +1,6 @@
 "use client";
+
+import Link from 'next/link';
 import React, { useState, useEffect } from "react";
 import { FaPlusSquare, FaBars, FaTimes } from "react-icons/fa";
 import { ImLocation2 } from "react-icons/im";
@@ -18,10 +20,10 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const data = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/contact" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -53,15 +55,15 @@ const Navbar = () => {
           className="hidden md:flex justify-center space-x-6"
         >
           {data.map((item, i) => (
-            <a
-              key={i}
-              href={item.href}
-              className={`"hover:text-blue-500" ${
-                scrolling ? "text-slate-700" : "text-white"
-              } `}
-            >
-              {item.name}
-            </a>
+            <Link key={i} href={item.path} >
+              <span
+                className={`hover:text-blue-300 ${
+                  scrolling ? "text-slate-700" : "text-white"
+                }`}
+              >
+                {item.name}
+              </span>
+            </Link>
           ))}
         </nav>
 
@@ -79,9 +81,13 @@ const Navbar = () => {
           className="md:hidden text-2xl justify-self-end"
         >
           {isOpen ? (
-            <FaTimes className={`${scrolling ? "text-slate-600" : "text-white"}`} />
+            <FaTimes
+              className={`${scrolling ? "text-slate-600" : "text-white"}`}
+            />
           ) : (
-            <FaBars className={`${scrolling ? "text-slate-600" : "text-white"}`} />
+            <FaBars
+              className={`${scrolling ? "text-slate-600" : "text-white"}`}
+            />
           )}
         </button>
       </div>

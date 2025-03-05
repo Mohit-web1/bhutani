@@ -5,6 +5,7 @@ import Banners from './components/baners/page';
 import Info from './components/info/page';
 import Left from './components/left/page';
 import Cards from './components/cards/page';
+import Contents from './components/contents/page';
 const page = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const page = () => {
     <Info />
     <Left />
     <Cards />
+    <Contents />
     </>
   )
 }
