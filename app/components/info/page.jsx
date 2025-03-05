@@ -19,7 +19,8 @@ const Page = () => {
       />
 
       {/* Content */}
-      <div className="container px-5 py-24 mx-auto">
+      <div data-aos="zoom-out-up" className="container px-5 py-24 mx-auto">
+
         <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center opacity-80 rounded-lg shadow-lg relative">
           <PageTitle heading="Versions" />
 

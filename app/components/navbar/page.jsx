@@ -22,7 +22,7 @@ const Navbar = () => {
   const data = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Services", path: "/contact" },
+    { name: "Services", path: "/service" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -40,12 +40,13 @@ const Navbar = () => {
               scrolling ? "text-slate-700" : "text-white"
             }`}
           />
+          <h1 className='text-6xl font-bold text-blue-500'>B</h1>
           <span
-            className={`ml-3 text-xl ${
+            className={`text-xl ${
               scrolling ? "text-slate-700" : "text-white"
             } `}
           >
-            Real-E-State
+            Bhutani
           </span>
         </a>
 
@@ -69,7 +70,7 @@ const Navbar = () => {
 
         {/* Desktop Button (Aligned Right) */}
         <div data-aos="fade-left" className="hidden md:flex justify-end">
-          <button className="flex space-x-2 items-center bg-blue-500 text-white px-4 py-2 w-[100px]">
+          <button className="flex space-x-2 cursor-pointer items-center bg-blue-500 text-white px-4 py-2 w-[100px]">
             <ImLocation2 />
             <span> Visit </span>
           </button>

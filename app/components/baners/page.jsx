@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import PageTitle from "../pageTitle/page";
 import { FaUserTie } from "react-icons/fa";
@@ -7,13 +6,12 @@ import { SiCoronaengine } from "react-icons/si";
 import { IoConstruct } from "react-icons/io5";
 import { FaRegHandshake } from "react-icons/fa6";
 
-const page = () => {
-
-  const sty = "w-18 h-18"
+const Page = () => {
+  const sty = "w-18 h-18";
 
   const data = [
     {
-      icon: <FaUserTie className={sty}/>,
+      icon: <FaUserTie className={sty} />,
       name: "Happy user",
       desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     },
@@ -39,7 +37,7 @@ const page = () => {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <PageTitle heading="Master Cleanse Reliac Heirloom" />
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-sm">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
             gentrify, subway tile poke farm-to-table. Franzen you probably
             haven't heard of them man bun deep jianbing selfies heirloom prism
@@ -48,15 +46,44 @@ const page = () => {
         </div>
         <div className="flex flex-wrap -m-4 text-center">
           {data.map((item, i) => (
-            <div key={i} className="p-4 md:w-1/4 sm:w-1/2 w-full ">
-              <div data-aos="fade-up" className="flex flex-col justify-center space-y-3 shadow-lg shadow-slate-400 border-2 border-gray-200 px-4 py-6 rounded-lg h-[350px]">
-
-                <div className="mx-auto">{item.icon}</div>
-                
-                <h2 className="title-font font-medium text-lg text-gray-600">
+            <div key={i} className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div
+                data-aos="fade-up"
+                className="flex flex-col justify-center space-y-3 
+                  shadow-lg 
+                  shadow-slate-400 
+                  border-2 
+                  border-gray-200 
+                  px-4 
+                  py-6 
+                  rounded-lg 
+                  h-[350px] 
+                  group 
+                  transition-all 
+                  duration-500 
+                  ease-in-out 
+                  transform 
+                  hover:-translate-y-4 
+                  hover:scale-105 
+                  hover:shadow-2xl 
+                  hover:border-blue-100 
+                  hover:bg-gray-50"
+              >
+                <div className="mx-auto transition-transform duration-500 group-hover:-translate-y-2">
+                  {item.icon}
+                </div>
+                <h2 className="title-font font-medium text-lg text-gray-600 
+                  transition-all 
+                  duration-500 
+                  group-hover:text-blue-600">
                   {item.name}
                 </h2>
-                <p className="leading-relaxed text-sm italic">{item.desc}</p>
+                <p className="leading-relaxed text-sm italic 
+                  transition-all 
+                  duration-500 
+                  group-hover:text-gray-800">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
@@ -66,4 +93,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

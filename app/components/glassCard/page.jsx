@@ -3,9 +3,9 @@
 import React from "react";
 import { FaHouseUser } from "react-icons/fa";
 
-const GlassCard = ({ title, desc, icon }) => {
+const GlassCard = ({ title, desc, icon, dataaos }) => {
   return (
-    <div className="p-4 lg:w-1/3">
+    <div data-aos={dataaos} className="p-4 lg:w-1/3">
       <div className="h-full bg-black opacity-60 backdrop-blur-lg px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative hover:shadow-slate-50 shadow-md shadow-slate-50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
           CATEGORY

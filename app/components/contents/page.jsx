@@ -8,6 +8,7 @@ import Img3 from "@/public/assets/villa/villa3.jpg";
 import Img4 from "@/public/assets/villa/villa4.jpg";
 
 const PropertyShowcase = () => {
+  
   return (
     <div className="flex flex-col bg-white p-6 md:p-10 lg:p-16 max-w-7xl mx-auto">
       <h1 className="text-3xl light-dance-regular mx-auto my-8 mb-10">
@@ -17,7 +18,7 @@ const PropertyShowcase = () => {
       {/* First section */}
       <div className="flex flex-col md:flex-row items-center mb-16 gap-6 md:gap-12">
         <div className="relative w-full md:w-1/2 flex justify-center">
-          <div className="rounded-full bg-amber-300 w-64 h-64 sm:w-90 sm:h-90 relative flex items-center justify-center ">
+          <div data-aos="zoom-out-right" className="rounded-full bg-amber-300 w-64 h-64 sm:w-90 sm:h-90 relative flex items-center justify-center ">
             <Image
               src={Img1}
               layout="responsive"
@@ -54,7 +55,7 @@ const PropertyShowcase = () => {
           </p>
         </div>
         <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative h-64 w-full sm:h-80 max-w-md">
+          <div data-aos="zoom-out-left" className="relative h-64 w-full sm:h-80 max-w-md">
             <Image
               src={Img4}
               layout="fill"
@@ -70,7 +71,7 @@ const PropertyShowcase = () => {
       {/* Third section */}
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
         <div className="w-full md:w-1/2 flex justify-center order-last md:order-first">
-          <div className="relative h-64 w-full sm:h-80 max-w-md">
+          <div data-aos="zoom-out-right" className="relative h-64 w-full sm:h-80 max-w-md">
             <Image
               src={Img2}
               layout="fill"
